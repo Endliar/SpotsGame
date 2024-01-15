@@ -8,6 +8,7 @@ namespace SpotsGame
     public partial class MainWindow : Window
     {
         private MixTiles _mixTiles = new MixTiles();
+        private int _moveCount = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -26,7 +27,39 @@ namespace SpotsGame
             {
                 Button emptyButton = FindEmptyButton();
                 SwapButtons(clickedButton, emptyButton);
+                _moveCount++;
+
+                if (IsGameComplete())
+                {
+                    MessageBox.Show($"Поздравляем! Игра завершена.\nКоличество ходов: {_moveCount}", "Игра завершена");
+                }
+                
             }
+        }
+
+        private bool IsGameComplete()
+        {
+            int size = 4;
+            int expectedValue = 1;
+
+            for (int i = 0; i < size; i++)
+            {
+                for (int j = 0; j < size; j++)
+                {
+                    if (i == size - 1 && j == size - 1)
+                    {
+                        return _mixTiles.GetShuffledTiles()[i, j] == 0;
+                    }
+
+                    if (_mixTiles.GetShuffledTiles()[i, j] != expectedValue)
+                    {
+                        return false;
+                    }
+
+                    expectedValue++;
+                }
+            }
+            return true;
         }
 
         private void InitializeTiles(int[,] shuffledState)
