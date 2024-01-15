@@ -1,0 +1,40 @@
+﻿<Window x:Class="SpotsGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SpotsGame"
+        mc:Ignorable="d"
+        Title="Пятнашки" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Row="0" Grid.Column="0" Content="1" Click="SpotsButton_click"/>
+        <Button Grid.Row="0" Grid.Column="1" Content="2" Click="SpotsButton_click"/>
+        <Button Grid.Row="0" Grid.Column="2" Content="3" Click="SpotsButton_click"/>
+        <Button Grid.Row="0" Grid.Column="3" Content="4" Click="SpotsButton_click"/>
+        <Button Grid.Row="1" Grid.Column="0" Content="5" Click="SpotsButton_click"/>
+        <Button Grid.Row="1" Grid.Column="1" Content="6" Click="SpotsButton_click"/>
+        <Button Grid.Row="1" Grid.Column="2" Content="7" Click="SpotsButton_click"/>
+        <Button Grid.Row="1" Grid.Column="3" Content="8" Click="SpotsButton_click"/>
+        <Button Grid.Row="2" Grid.Column="0" Content="9" Click="SpotsButton_click"/>
+        <Button Grid.Row="2" Grid.Column="1" Content="10" Click="SpotsButton_click"/>
+        <Button Grid.Row="2" Grid.Column="2" Content="11" Click="SpotsButton_click"/>
+        <Button Grid.Row="2" Grid.Column="3" Content="12" Click="SpotsButton_click"/>
+        <Button Grid.Row="3" Grid.Column="0" Content="13" Click="SpotsButton_click"/>
+        <Button Grid.Row="3" Grid.Column="1" Content="14" Click="SpotsButton_click"/>
+        <Button Grid.Row="3" Grid.Column="2" Content="15" Click="SpotsButton_click"/>
+
+        <Button Grid.Row="3" Grid.Column="3" Content="" Click="SpotsButton_click"/>
+    </Grid>
+</Window>
